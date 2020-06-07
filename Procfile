@@ -1,1 +1,1 @@
-web unicorn Trazabilidad.wsgi
+web gunicorn Trazabilidad.wsgi
