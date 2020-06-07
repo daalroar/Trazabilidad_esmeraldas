@@ -3,7 +3,7 @@ from Registro.settings.base import*
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['https://trazabilidad-esmeraldas.herokuapp.com/']
+ALLOWED_HOSTS = ['trazabilidad-esmeraldas.herokuapp.com']
 
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
