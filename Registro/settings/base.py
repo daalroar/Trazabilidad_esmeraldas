@@ -111,8 +111,11 @@ USE_TZ = True
 #este directorio de archivos esta bien puesto en como ruta en el local, le probe si le pongo otra ruta falla
 #pero parece que no es una ruta absoluta, hay que conseguir que funcione con una ruta absoluta
 #pruebo con /Registro/static/Registro/ y funciono en el local
+#pruebo con lo que sugiere
 
-STATIC_URL = '/Registro/static/Registro/'
+
+STATIC_URL = '/static/'
+
 
 EMAIL_BACKEND       =   'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST          =   'smtp.gmail.com'

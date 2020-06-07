@@ -2,7 +2,7 @@ from Registro.settings.base import*
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['https://trazabilidad-esmeraldas.herokuapp.com/']
 
