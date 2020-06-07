@@ -1,0 +1,20 @@
+{% extends "base.html"%}
+
+{% block title %} Informacion CAE {% endblock %}
+
+<!-- esta plantilla registro.html hereda la estructura de base.html, por ello 
+la primera linea de una plantilla que aplica la herencia es la siguiente -->
+
+{% block content %} 
+
+<p style="color: darkolivegreen;">Interfaz de visualizacion de resultados de búsqueda </p>
+<p style= "color: darkolivegreen; text-align: right;">{{fecha_actual}}</p> 
+
+<form action="/lotizado/" method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" value="Enviar">
+</form>
+
+
+{% endblock %}

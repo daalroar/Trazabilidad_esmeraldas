@@ -1,0 +1,37 @@
+{% extends "base.html"%}
+
+{% block title %} Nombre {% endblock %}
+
+<!-- esta plantilla registro.html hereda la estructura de base.html, por ello 
+la primera linea de una plantilla que aplica la herencia es la siguiente -->
+
+{% block content %} 
+<p style="color: darkolivegreen;">Interfaz de visualizacion de resultados de búsqueda </p>
+<p style= "color: darkolivegreen; text-align: right;">{{fecha_actual}}</p> 
+<!-- repaso de documentacion oficial, html para un campo que ingrese el nombre-->
+<!--abrimos un objetoformulario  html del tipo form que habilita la url nombre, y que envia los datos con el metodod post-->
+
+<!--
+
+<form action="/nombre/" method="POST">
+    {% csrf_token %}
+    <!--label = etiqueta para la variable "su nombre" con el texto Su nombre--> 
+<!--   <label for="su nombre"> Su nombre </label>--> 
+    <!--con el id "su nombre" una caja del tipo o wiget texto identificado como su nombre que recibe un valor retornado llamado nombre actual-->
+<!--  <input id="su nombre" type="text" name="su nombre" value="{{nombre_actual}}">
+    <!--un boton del tipo submit=enviar  con un etiqueta escrita llamada guardar-->
+<!--   <input type="submit" value="Guardar">
+</form> -->
+
+<!-- EJEMPLO DEL FORMULARIO CON UN SOLO CAMPO -->
+
+<form action="" method="post">
+    {% csrf_token %}
+    {{ form2 }}
+    <input type="submit" value="Submit">
+</form>
+
+
+
+
+{% endblock %}

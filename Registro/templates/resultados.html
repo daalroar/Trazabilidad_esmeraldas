@@ -1,0 +1,37 @@
+{% extends "base.html"%}
+
+{% block title %} Resultado de Búsquedas {% endblock %}
+
+<!-- esta plantilla registro.html hereda la estructura de base.html, por ello 
+la primera linea de una plantilla que aplica la herencia es la siguiente -->
+
+{% block content %} 
+<p style="color:white;font-size: 1.2rem;">Interfaz de visualizacion de resultados de búsqueda </p>
+<p style="color:white;font-size: 1rem;"; text-align: right;">{{fecha_actual}}</p> 
+
+<!--Esta linea en negrita presenta el resultado de query de views.py que contiene
+la consulta que ingreso por el cuadro de texto almacenada-->
+<p  style="color:white;font-size: 1rem;"> Estas buscando al  productor <strong>{{query}} </strong>  en la fecha <strong> {{query1}} </strong> </p>
+
+{% if productores %}
+    <p style="color:white;font-size: 1rem;" >Registros: {{productores|length}} transacciones </p>
+
+    <table bordercolor=white BORDER CELLPADDING=5 CELLSPACING=5 border summary="Tabla con los datos de los resultados de la búsqueda">  
+        <caption>Resultado de la búsqueda</caption>
+        <tr style="color:white;font-size: 0.8rem;">
+            <td><strong>Cedula</strong></td>
+            <td><strong>Fecha de compra</strong></td>
+            <td><strong>Centro de acopio</strong></td>
+        </tr>
+        {% for agricultor in productores %}
+            <tr style="color:white;font-size: 0.8rem;">
+                <td> {{agricultor.cedula_productor}}</td>
+                <td> {{agricultor.fecha_compra_venta}}</td>
+                <td> {{agricultor.centro_acopio_opciones}}</td>
+            </tr>
+        {% endfor %}
+    </table>    
+{% else %}
+    <p style="color:white;font-size: 1rem;">No se encontraron productores con esa identificacion</p>
+{% endif %}
+{% endblock %}

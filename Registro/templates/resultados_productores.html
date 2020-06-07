@@ -1,0 +1,49 @@
+{% extends "base.html"%}
+
+{% block title %} Resultado de Búsquedas {% endblock %}
+
+<!-- esta plantilla registro.html hereda la estructura de base.html, por ello 
+la primera linea de una plantilla que aplica la herencia es la siguiente -->
+
+{% block content %} 
+<p style="color:white;font-size: 1rem;">Resultados de búsqueda de clientes </p>
+<p style="color:white;font-size: 1rem;"; text-align: right;">{{fecha_actual}}</p> 
+
+<!--Esta linea en negrita presenta el resultado de query de views.py que contiene
+la consulta que ingreso por el cuadro de texto almacenada-->
+<p> Estas buscando los productores del cliente <strong>{{query}} </strong>  del lote <strong> {{query1}} </strong> del contrato <strong>  {{query2}} </strong>  </p>
+<!-- el siguiente condicional es para crear dos alternativas: si un articulo ha sido encontrado
+entonces se presenta un parrafo que detalla cuantos articulos se encontraron y luego una lista 
+con los articulos encontrados, asi como la seccion y el nombre de estos para el condicionel es
+if y para presentar como lista los match se usa un bucle for-->
+
+<div style="color: white; font-size: 0.8rem;">
+
+{% if Productores %}
+    <p>Registros: {{Productores|length}} transacciones </p>
+    <table bordercolor=darkolivegreen BORDER CELLPADDING=5 CELLSPACING=5 border summary="Tabla con los datos de los resultados de la búsqueda">
+        <caption>Resultado de la búsqueda</caption>
+        <tr>
+            <td><strong>Cedula</strong></td>
+            <td><strong>Fecha de compra</strong></td>
+            <td><strong>Centro de acopio</strong></td>
+            <td><strong>Quintales</strong></td>
+        </tr>
+        {% for agricultor in Productores %}
+            <tr>
+                <td> {{agricultor.cedula_productor}}</td>
+                <td> {{agricultor.fecha_compra_venta}}</td>
+                <td> {{agricultor.centro_acopio_opciones}}</td>
+                <td> {{agricultor.peso_lote_calificado}}</td>
+            </tr>
+        {% endfor %}
+    </table>    
+
+
+    
+{% else %}
+    <p>No se encontraron productores con esa identificacion</p>
+{% endif %}
+
+</div>
+{% endblock %}

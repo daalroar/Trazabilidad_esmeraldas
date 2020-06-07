@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block content %} 
+
+   <!-- Heading -->
+   <section class="page-section clearfix">
+    <div class="container">
+      <div class="intro">
+        <img class="intro-img img-fluid mb-3 mb-lg-0 rounded" src="{% static 'Registro/img/mazorca.jpeg' %}" alt="">
+        <div class="intro-text left-0 text-center bg-faded p-5 rounded">
+          <h2 class="section-heading mb-4" >
+            <span class="section-heading-upper">Proyecto “Desarrollo socio productivo y comercial con equidad de género en 4 parroquias rurales (fase II)”</span>
+            <span class="section-heading-lower"> ESMERALDAS - ECUADOR</span>
+          </h2>
+          <p class="mb-3">Plataforma de seguimiento del proceso de comercialización: del productor al cliente final
+          </p>
+         
+        </div>
+      </div>
+    </div>
+  </section>
+  
+    <!-- Message -->
+    <section class="page-section cta">
+      <div class="container">
+        <div class="row">
+          <div class="col-xl-9 mx-auto">
+            <div class="cta-inner text-center rounded">
+              <h2 class="section-heading mb-4">
+                <span class="section-heading-upper">Con el apoyo de</span>
+                <span class="section-heading-lower">Fundación Maquita</span>
+              </h2>
+              <p class="mb-0">Parroquias: Timbiré, Borbón,Colón Eloy del María y San Gregorio de la provincia de Esmeraldas - Ecuador</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+{% endblock %}

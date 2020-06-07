@@ -1,0 +1,322 @@
+body {
+  font-family: 'Lora';
+  background: linear-gradient(rgba(47, 23, 15, 0.65), rgba(47, 23, 15, 0.65)), url("../img/manos cacao.jpeg");
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Raleway';
+}
+
+p {
+  line-height: 1.75;
+}
+
+.text-faded {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+/*Sistema de Trazabilidad Cacaos Especiales espacios arriba y abajo*/
+
+.site-heading {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  line-height: 1;
+  font-family: 'Raleway';
+}
+
+/*npi*/
+
+.site-heading .site-heading-upper {
+  display: block;
+  font-size: 2rem;
+  font-weight: 800;
+}
+
+/*Sistema de Trazabilidad Cacaos Especiales tamaño de la letra*/
+
+.site-heading .site-heading-lower {
+  font-size: 3.5rem;
+  font-weight: 100;
+  line-height: 4rem; /*ancho de la banda que contiene el site heading*/
+}
+
+/*distancia del site heading  al body*/
+.page-section {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.section-heading {
+  text-transform: uppercase;
+}
+
+/*recuadro que contiene el nombre del proyecto SECCION SUPERIOR
+Proyecto “Desarrollo socio productivo y comercial con equidad de género en 4 parroquias rurales de Esmeraldas (fase II)” Ecuador
+Plataforma de seguimiento del proceso de comercialización: del productor al cliente final
+*/
+
+.section-heading .section-heading-upper {
+  display: block;
+  font-size: 1rem;
+  font-weight: 800;
+  padding-bottom:0.5rem;
+}
+
+/*recuadro que contiene el nombre del proyecto SECCION SUPERIOR
+Proyecto “Desarrollo socio productivo y comercial con equidad de género en 4 parroquias rurales de Esmeraldas (fase II)” Ecuador
+Plataforma de seguimiento del proceso de comercialización: del productor al cliente final
+*/
+
+/*lo mismo que la anterior pero ECUADOR*/
+
+.section-heading .section-heading-lower {
+  display: block;
+  font-size: 2rem;
+  font-weight: 100;
+}
+
+/*lo mismo que la anterior pero ABAJO*/
+
+.section-heading .section-heading-under {
+  display: block;
+  font-size: 1rem;
+  text-transform: none;
+  font-weight: 300;
+  margin-top:0.5rem;
+}
+
+/*NPI*/
+.bg-faded {
+  background-color: rgba(255, 255, 255, 0.85);
+}
+
+/*color de fondo de la barra de navegacion*/
+
+#mainNav {
+  background-color: rgba(24, 64, 8);
+  font-family: 'Raleway';
+}
+
+/*NPI*/
+
+#mainNav .navbar-brand {
+  color: white;
+}
+
+/*COLORES DE LAS LETRAS DEL MENU DE NAVEGACION POR DEFECTO*/
+#mainNav .navbar-nav .nav-item .nav-link {
+  color:rgba(255, 255, 255, 0.7);
+  font-weight: 800;
+}
+
+/*COLORES DE LAS LETRAS DEL MENU DE NAVEGACION ACTIVO*/
+
+#mainNav .navbar-nav .nav-item.active .nav-link {
+  color:white;
+  text-decoration: underline;
+}
+
+
+@media (min-width: 992px) {
+  /*TAMAÑO DE LETRA MENU DE NAVEGACION*/
+  #mainNav .navbar-nav .nav-item .nav-link {
+    font-size: 0.9rem;
+  }
+  /*cuando el puntero pasa por el link cambia de color a:*/
+  #mainNav .navbar-nav .nav-item .nav-link:hover {
+    color: rgba(255, 255, 255, 0.4);
+    text-decoration: underline;
+  }
+  /*la pestaña activa se pone deste color*/
+  #mainNav .navbar-nav .nav-item.active .nav-link:hover {
+    color: #ffffff;
+    text-decoration: underline;
+  }
+}
+/*npi*/
+.btn-xl {
+  font-weight: 700;
+  font-size: 0.8rem;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+/*npi*/
+.intro {
+  position: relative;
+}
+
+
+@media (min-width: 992px) {
+  /*tamaño de la mazorca de cacao*/
+  .intro .intro-img {
+    width: 69%;
+    float: left;
+  }
+  /*posicion del recuadro a lado de la mazorca*/
+  .intro .intro-text {
+    /*imagina un eje cartesiano left muestra cuantos espacios a la izquierda quedan*/
+    left: 700;
+    width: 70%;
+    margin-top: 3rem;
+    background-color: rgba(24, 64, 8);
+    color: cornsilk;
+    position: absolute;
+  }
+
+  /*npi*/
+  .intro .intro-text .intro-button {
+    width: 100%;
+    left: 0;
+    position: absolute;
+    bottom: -2rem;
+  }
+}
+
+/*npi*/
+
+@media (min-width: 1200px) {
+  .intro .intro-text {
+    width: 45%;
+  }
+}
+
+/*cuadro blanco bajo la mazorca*/
+.cta {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  background-color: rgb(242, 245, 240);
+}
+
+/*cuadro verde dentro del cuadro blanco bajo la mazorca*/
+
+.cta .cta-inner {
+  position: relative;
+  padding: 2rem;
+  margin: .5rem;
+  background-color: rgba(24, 64, 8);
+  color: cornsilk;
+  width: 50rem;
+}
+/*recuadro alrededor del cuadro verde*/
+.cta .cta-inner:before {
+  border-radius: 0.5rem;
+  content: '';
+  position: absolute;
+  top: -0.5rem;
+  bottom: -0.5rem;
+  left: -0.5rem;
+  right: -0.5rem;
+  border: 0.25rem solid rgba(255, 255, 255, 0.85);
+}
+/*npi*/
+.cta .cta-innerv {
+  position: relative;
+  padding: 3rem;
+  margin: 0.5rem;
+  background-color: rgba(255, 255, 255, 0.85);
+}
+/**/
+@media (min-width: 992px) {
+  .about-heading .about-heading-img {
+    position: relative;
+    z-index: 0;
+  }
+  .about-heading .about-heading-content {
+    margin-top: -5rem;
+    position: relative;
+    z-index: 1;
+  }
+}
+
+@media (min-width: 992px) {
+  .product-item .product-item-title {
+    position: relative;
+    z-index: 1;
+    margin-bottom: -3rem;
+  }
+  .product-item .product-item-img {
+    position: relative;
+    z-index: 0;
+    max-width: 60vw;
+  }
+  .product-item .product-item-description {
+    position: relative;
+    z-index: 1;
+    margin-top: -3rem;
+    max-width: 50vw;
+  }
+}
+
+
+
+@media (min-width: 992px) {
+  .list-hours {
+    width: 50%;
+    font-size: 1.1rem;
+  }
+}
+
+.address strong {
+  font-size: 1.2rem;
+}
+/*color de fondo del footer*/
+.footer {
+  background-color: rgba(24, 64, 8, 0.8);
+}
+
+
+
+.btn {
+  box-shadow: 0px 3px 3px 0px rgba(33, 37, 41, 0.1);
+}
+
+
+
+.font-weight-light {
+  font-weight: 100 !important;
+}
+
+.mbtm{
+  padding-top: 5rem;
+}
+
+.mbt{
+  padding-top: 2rem;
+}
+
+.mbt1{
+  padding-top: 1.25rem;
+}
+
+a.link{
+  color: rgba(255, 255, 255, 0.7);
+}
+
+a.link:hover{
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.section-content{
+  font-family: 'Lora' !important;
+  font-size: 16px !important;
+  font-weight: 400 !important;
+  line-height: 28px !important;
+}
+
+ul.errorlist{
+  padding-top: .75rem;
+  font-style: italic;
+  color: red;
+}

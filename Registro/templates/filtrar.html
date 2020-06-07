@@ -1,0 +1,36 @@
+{% extends "base.html"%}
+
+{% block title %} Busqueda por cliente, lote y contrato {% endblock %}
+
+<!-- esta plantilla registro.html hereda la estructura de base.html, por ello 
+la primera linea de una plantilla que aplica la herencia es la siguiente -->
+
+{% block content %} 
+<p style="color:white;font-size: 1rem;">Búsqueda por cliente, Lote de compra y contrato</p>
+<p style= "color:white; text-align: right;">{{fecha_actual}}</p> 
+<div style="color: white; font-size: 0.8rem;">
+<form action="/resultados_productores/" method="GET">
+
+<!--  esta linea activa una url a traves de la cual pasa el lo que se almacena mas abajo en 
+    "prd" como lo se porque despues esta url debe exister en urls.py y contener una vista o 
+    funcion para que todo tenga sentido en otras palabras este template busqueda_productos pasa
+    al servidor una url donde se alojaran los resultados, ademas en la misma url le pasa el dato
+    almacenado en el cuadro de texto-->
+<!--La siguiente linea arma un cuadro de texto de busqueda el nombre es importante
+    para rescatar la informacion del cuadro de texto-->
+Cliente
+<p> <input type="text" name="cust" title= "Cliente"> </p>
+
+Lote de compra/venta
+<p> <input type="text" name="lote_id" title= "Lote de exportacion" > </p>
+
+Numero de contrato
+<p> <input type="text" name="contract_id" title= "Contrato de exportacion" > </p>
+
+<p> <input type="submit" value="Buscar"> </p>
+
+ 
+</form>
+ 
+</div>
+{% endblock %}

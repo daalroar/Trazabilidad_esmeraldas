@@ -1,0 +1,23 @@
+{% extends "base.html"%}
+{# Trazabilidad/Registro/templates/resultados_productores_table.html #}
+{% load render_table from django_tables2 %}
+{% load django_tables2%}
+
+{% block title %} Resultado de busqueda por clientes {% endblock %} 
+{% block content %} 
+<p style="color:white;font-size: 1rem;">Resultados de búsqueda de clientes </p>
+<p style= "color:white;font-size: 1rem; text-align: right;">{{fecha_actual}}</p> 
+<p style="color:white;font-size: 1rem;"> Estas buscando los productores del cliente <strong>{{query}} </strong>  del lote <strong> {{query1}} </strong> del contrato <strong>  {{query2}} </strong>  </p>
+<div style="color: white; font-size: 0.8rem;">
+{% render_table table %}
+Descargar archivo csv
+<form action="/resultados_productores/" method="GET">
+
+    <input type="hidden" name="cust" value={{query}} />
+    <input type="hidden" name="lote_id" value={{query1}} />
+    <input type="hidden" name="contract_id" value={{query2}} />
+
+<p> <input type="submit" name="_export" value="csv" title= "Descargar" </p>
+</form>
+</div>
+{% endblock %}  

@@ -1,0 +1,20 @@
+{% extends "base.html"%}
+
+{% block title %} Lista Lote {% endblock %}
+
+<!-- esta plantilla registro.html hereda la estructura de base.html, por ello 
+la primera linea de una plantilla que aplica la herencia es la siguiente -->
+
+{% block content %} 
+
+<p style="color: darkolivegreen;">Interfaz de visualizacion de resultados de búsqueda </p>
+<p style= "color: darkolivegreen; text-align: right;">{{fecha_actual}}</p> 
+
+<!-- el siguiente if valida si existe algun error y solicita que se corrija en el mismo formulario-->
+<!-- H2 subtitulo  -->
+<h2>Lista Lotes Centro Acopio Exportador </h2>
+<!-- Texto con enfasis  -->
+<em> Lista Lotes CAE </em>
+
+
+{% endblock %}

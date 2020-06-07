@@ -1,0 +1,52 @@
+{% extends "base.html"%}
+
+{% block title %} Contacto Copy {% endblock %}
+
+<!-- esta plantilla registro.html hereda la estructura de base.html, por ello 
+la primera linea de una plantilla que aplica la herencia es la siguiente -->
+
+{% block content %} 
+
+<p style="color: darkolivegreen;">Interfaz de visualizacion de resultados de búsqueda </p>
+<p style= "color: darkolivegreen; text-align: right;">{{fecha_actual}}</p> 
+
+<!-- el siguiente if valida si existe algun error y solicita que se corrija en el mismo formulario-->
+
+{%if form3.errors %}
+<p style="color:blue;"> Revisar este campo </p>
+{% endif %}
+
+<!-- codigo que aplica APIforms OJO NUNCA API FORMS CREA forms ni table-->
+
+<form action="/contactocopy/" method="post">
+    {% csrf_token %}
+    <div class="fieldWrapper">
+        {{ form3.remitente.errors }}
+        <label for="{{ form3.remitente.id_for_label }}">Direccion de correo del remitente:</label>
+        {{ form3.remitente }}
+    </div>
+
+    <div class="fieldWrapper">
+        {{ form3.asunto.errors }}
+        <label for="{{ form3.asunto.id_for_label }}">Asunto del correo:</label>
+        {{ form3.asunto }}
+    </div>
+    <div class="fieldWrapper">
+        {{ form3.mensaje.errors }}
+        <label for="{{ form3.mensaje.id_for_label }}"> Mensaja del correo :</label>
+        {{ form3.mensaje }}
+    </div>
+
+    <div class="fieldWrapper">
+        {{ form3.copia_a_mi.errors }}
+        <label for="{{ form3.copia_a_mi.id_for_label }}">Con copia a usted?</label>
+        {{ form3.copia_a_mi }}
+    </div>
+    <input type="submit" value="Enviar">
+
+
+
+</form>
+
+
+{% endblock %}

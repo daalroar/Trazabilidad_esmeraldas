@@ -1,0 +1,20 @@
+{% extends "base.html"%}
+
+{% block title %} Formulario ingreso informacion cae  {% endblock %}
+
+<!-- esta plantilla registro.html hereda la estructura de base.html, por ello 
+la primera linea de una plantilla que aplica la herencia es la siguiente -->
+
+{% block content %} 
+
+<p style="color: white; font-size: 1rem; ">Interfaz de ingreso de información </p>
+<p style= "color: white; text-align: right;">{{fecha_actual}}</p> 
+<div style="color: white; font-size: 0.8rem;">
+<form action="/form_cae/" method="POST">
+    {{ form5.as_p }}
+    {% csrf_token %}
+    <button type="submit">Crear</button>
+</form>
+</div>
+
+{% endblock %}

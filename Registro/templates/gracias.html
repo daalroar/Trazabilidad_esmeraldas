@@ -1,0 +1,16 @@
+{% extends "base.html"%}
+
+{% block title %} Gracias {% endblock %}
+
+<!-- esta plantilla registro.html hereda la estructura de base.html, por ello 
+la primera linea de una plantilla que aplica la herencia es la siguiente -->
+
+{% block content %} 
+<p style="color: darkolivegreen;">Interfaz de visualizacion de resultados de búsqueda </p>
+<p style= "color: darkolivegreen; text-align: right;">{{fecha_actual}}</p> 
+<p> INFORMACION CARGADA CORRECTAMENTE GRACIAS!!!</p>
+<form action="/form_cae/" method="GET">
+    <button type="submit">Crear</button>
+</form>
+
+{% endblock %}
