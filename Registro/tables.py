@@ -20,7 +20,7 @@ class Registros_traz_Table(tables.Table):
     fecha_embarque_exp = tables.Column(attrs={"th": {"bgcolor": "white","style":"color:green"},"td":{"bgcolor": "white","style": "color:green"}})
     precio_fob_tm_exp = tables.Column(attrs={"th": {"bgcolor": "white","style":"color:green"},"td":{"bgcolor": "white","style": "color:green"}})
     franquicia_exp = tables.Column(attrs={"th": {"bgcolor": "white","style":"color:green"},"td":{"bgcolor": "white","style": "color:green"}})
-    #cliente_exp = tables.Column(attrs={"th": {"bgcolor": "white","style":"color:green"},"td":{"bgcolor": "white","style": "color:green"}})
+    cliente_exp = tables.Column(attrs={"th": {"bgcolor": "white","style":"color:green"},"td":{"bgcolor": "white","style": "color:green"}})
     fecha_sal_emb_exp = tables.Column(attrs={"th": {"bgcolor": "white","style":"color:green"},"td":{"bgcolor": "white","style": "color:green"}})
     fecha_arr_emb_exp = tables.Column(attrs={"th": {"bgcolor": "white","style":"color:green"},"td":{"bgcolor": "white","style": "color:green"}})
     
@@ -76,7 +76,7 @@ class Registros_traz_Table(tables.Table):
             #'posiciones_exp_opciones',
             'precio_fob_tm_exp',
             'franquicia_exp',
-            #'cliente_exp',
+            'cliente_exp',
             'fecha_sal_emb_exp',
             'fecha_arr_emb_exp',
         ) 

@@ -87,7 +87,7 @@ def customer_search(request):
             product2= product1.filter(contrato_exp__exact=contrato)
             #icontains es equivalente a like en lenguaje sql
             #desde aca empiezo a trabajar en una tabla
-            table=Registros_traz_Table(Registros_traz.objects.filter(cliente_exp__icontains=cliente,lote_exp__icontains=lote))                             #product2 es un query set, perfecto pero me parece que le falta parametros
+            table=Registros_traz_Table(Registros_traz.objects.filter(cliente_exp__exact=cliente,lote_exp__exact=lote))                             #product2 es un query set, perfecto pero me parece que le falta parametros
             RequestConfig(request).configure(table) #necesito para paginar y para exportar
             export_format = request.GET.get("_export", None)
             if  TableExport.is_valid_format(export_format):
