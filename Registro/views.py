@@ -82,9 +82,9 @@ def customer_search(request):
         lote      =   request.GET["lote_id"]
         contrato  =   request.GET["contract_id"]
         if  len(cliente)<50 and len(lote)<20 and len (contrato)<20:
-            product=Registros_traz.objects.filter(cliente_exp__icontains=cliente)
-            product1= product.filter(lote_exp__icontains=lote)
-            product2= product1.filter(contrato_exp__icontains=contrato)
+            product=Registros_traz.objects.filter(cliente_exp__exact=cliente)
+            product1= product.filter(lote_exp__exact=lote)
+            product2= product1.filter(contrato_exp__exact=contrato)
             #icontains es equivalente a like en lenguaje sql
             #desde aca empiezo a trabajar en una tabla
             table=Registros_traz_Table(Registros_traz.objects.filter(cliente_exp__icontains=cliente,lote_exp__icontains=lote))                             #product2 es un query set, perfecto pero me parece que le falta parametros
