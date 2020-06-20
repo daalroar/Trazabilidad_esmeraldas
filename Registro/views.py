@@ -77,7 +77,7 @@ def filtrar(request):
 ####################################################################################################################################
 
 def customer_search(request):
-    if  request.GET["cust"] and request.GET["lote_id"] and request.GET["contract_id"]:
+    if  request.GET["cust"] or request.GET["lote_id"] or request.GET["contract_id"]:
         cliente   =   request.GET["cust"]
         lote      =   request.GET["lote_id"]
         contrato  =   request.GET["contract_id"]
