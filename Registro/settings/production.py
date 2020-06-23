@@ -19,4 +19,6 @@ DATABASES = {
     }
 }
 
-STATICFILES_DIRS = (BASE_DIR,'static')
+#comentar la siguiente fila en local
+'''
+STATICFILES_DIRS = (BASE_DIR,'static')'''

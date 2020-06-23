@@ -11,10 +11,15 @@ import os
 
 from django.core.wsgi import get_wsgi_application
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'Registro.settings.production') #linea que se cambia para local/produccion
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'Registro.settings.local') #linea que se cambia para local/produccion
 
-#application = get_wsgi_application()
+application = get_wsgi_application()
 
+
+
+#se comentan la siguientes lineas para local
+
+'''
 from dj_static import Cling
 
-application = Cling(get_wsgi_application())
+application = Cling(get_wsgi_application())'''

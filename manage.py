@@ -5,7 +5,7 @@ import sys
 
 
 def main():
-    os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'Registro.settings.production')  #linea que se cambia para producción o para local
+    os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'Registro.settings.local')  #linea que se cambia para producción o para local
     try:
         from django.core.management import execute_from_command_line
     except ImportError as exc:
